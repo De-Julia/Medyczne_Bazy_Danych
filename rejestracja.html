@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap demo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
+        crossorigin="anonymous">
+      </head>
+<body>
+<div class="container">
+<form>
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="validationServer01">Imię:</label>
+        <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Imię" value="" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationServer02">Nazwisko:</label>
+        <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Nazwisko" value="" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationServer03">Miejscowość:</label>
+        <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Miejscowość" required>
+        <div class="invalid-feedback">
+          Proszę wprowadzić prawidłową nazwę miejscowości.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationServer04">Adres:</label>
+        <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Nazwa ulicy oraz numer domu/mieszkania" required>
+        <div class="invalid-feedback">
+          Proszę wprowadzić prawidłowy adres.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationServer05">Kod pocztowy:</label>
+        <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Kod pocztowy" required>
+        <div class="invalid-feedback">
+          Proszę wprowadzić prawidłowy kod pocztowy.
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+        <label class="form-check-label" for="invalidCheck3">
+          Zgoda na warunki korzystania
+        </label>
+        <div class="invalid-feedback">
+          Musisz wyrazić zgodę na warunki korzystania przed zatwierdzeniem.
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Zatwierdź formluarz</button>
+  </form>
+</div>
+</body>
+</html>
