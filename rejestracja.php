@@ -12,7 +12,7 @@
     <form class="was-validated" action="connect.php" method="post">
         <div class="container p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
   
-            <div class="form-row">
+            <div class="form-row col-md-4">
                 <label> Płeć:</label>
                 <select class="form-select" name="plec" aria-label="WyborPlci" required>
                     <option selected>Wybierz płeć pacjenta</option>
@@ -21,18 +21,21 @@
                     <option value="3">Inne</option>
                 </select>
             </div> 
-            <div class="col-md-4 mb-3 ">
-                <label for="imie" class="form-label">Imię:</label>
-                <input type="text" class="form-control" id="imie" name="imie" placeholder="Imię" value="" required>
-                <div class="valid-feedback"></div>
-                <div class="invalid-feedback">Proszę wprowadzić imię pacjenta.</div>
+            <br>
+            <div class="row">
+                <div class="col-md-4 mb-3 ">
+                    <label for="imie" class="form-label">Imię:</label>
+                    <input type="text" class="form-control" id="imie" name="imie" placeholder="Imię" value="" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Proszę wprowadzić imię pacjenta.</div>
+                </div>
+    
+                <div class="col-md-4 mb-3 ">
+                    <label for="drugie_imie" class="form-label">Drugie imię:</label>
+                    <input type="text" class="form-control" name="drugie_imie" placeholder="Drugie imię" value="" >
+                </div>
             </div>
-
-            <div class="col-md-4 mb-3 ">
-                <label>Drugie imię:</label>
-                <input type="text" class="form-control" placeholder="Drugie imię" value="" >
-            </div>
-
+            
             <div class="col-md-4 mb-3 ">
                 <label for="nazwisko" class="form-label">Nazwisko:</label>
                 <input type="text" class="form-control" id="nazwisko" name="nazwisko" placeholder="Nazwisko" value="" required>
@@ -48,14 +51,33 @@
                 <div class="invalid-feedback">Proszę wprowadzić numer PESEL pacjenta.</div>
             </div>
   
-            <div class="conatainer">
+            <div class="conatainer col-md-4">
                 <label for="startDate">Data urodzenia:</label>
                 <input id="startDate" class="form-control" name="startDate" type="date" required/>
                 <div class="valid-feedback"></div>
                 <div class="invalid-feedback">Proszę wprowadzić datę urodzenia pacjenta.</div>
             </div>
         </div>
-            <br>
+
+        <br>
+
+        <div class="container p-2 mb-2 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+            
+            <div class="col-md-3 mb-3 ">
+                <label for="nrTelefonu">Numer telefonu:</label>
+                <input type="text" maxlength="9" class="form-control" id="nrTelefonu" name="nrTelefonu" placeholder="Numer telefonu" required>
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback">Proszę wprowadzić numer telefonu.</div>
+            </div>
+
+            <div class="col-md-3 mb-3 ">
+                <label for="adresEmail">Andres e-mail:</label>
+                <input type="email" class="form-control" id="AdresEmail" name="AdresEmail" placeholder="Adres e-mail">
+            </div>
+        </div>  
+        
+        <br>
+
         <div class="container p-2 mb-2 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
 
             <div class="col-md-6 mb-3">
@@ -65,21 +87,33 @@
                 <div class="invalid-feedback">Proszę wprowadzić prawidłową nazwę miejscowości.</div> 
             </div>
 
-            <div class="col-md-3 mb-3 ">
-                <label for="adres">Adres:</label>
-                <input type="text" class="form-control" id="adres" name="adres" placeholder="Nazwa ulicy oraz numer domu/mieszkania" required>
+            <div class="col-md-6 mb-3">
+                <label for="adres">Ulica:</label>
+                <input type="text" class="form-control" id="adres" name="ulica" placeholder="Nazwa ulicy" required>
                 <div class="valid-feedback"></div>
                 <div class="invalid-feedback">Proszę wprowadzić prawidłowy adres.</div>
             </div>
-
-            <div class="col-md-3 mb-3 ">
-                <label for="KodPocztowy">Kod pocztowy:</label>
-                <input type="text" class="form-control" id="KodPocztowy" name="KodPocztowy" placeholder="Kod pocztowy" required>
-                <div class="valid-feedback"></div>
-                <div class="invalid-feedback">Proszę wprowadzić prawidłowy kod pocztowy.</div>
+            
+            <div class="row">
+                <div class="col-md-3 mb-3 ">
+                    <label for="adres">Numer domu:</label>
+                    <input type="text" class="form-control" id="adres" name="nrDomu" placeholder="Numer domu" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Proszę wprowadzić numer domu.</div>
+                </div>
+                <div class="col-md-3 mb-3 ">
+                    <label for="adres">Numer mieszkania:</label>
+                    <input type="text" class="form-control" id="adres" name="nrMieszkania" placeholder="Numer mieszkania">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="KodPocztowy">Kod pocztowy:</label>
+                    <input type="text" class="form-control" id="KodPocztowy" name="KodPocztowy" placeholder="Kod pocztowy" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Proszę wprowadzić prawidłowy kod pocztowy.</div>
+                </div>
             </div>
-
-            <div class="form-row ">
+            
+            <div class="form-row col-md-6">
                 <label> Wielkość miejsca zamieszkania:</label>
                 <select class="form-select" name="wielkoscMiejscowosci" aria-label="Default select example">
                 <option selected>Wybierz wielkość miejsca zamieszkania</option>
@@ -92,7 +126,7 @@
             <br>
 
             <div class="form-group">
-                <div class="form-check ">
+                <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" required>
                     <label class="form-check-label" for="invalidCheck3">
                     Zgoda na warunki korzystania
